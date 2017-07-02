@@ -4,6 +4,6 @@
   <endpoint
      name="HelloWorldWS"
      implementation="com.mysoftkey.jaxws.hellowold.HelloWorldImpl"
-     url-pattern="/HelloWorldWS"/>
+     url-pattern="/HelloWorldWS" />
      
 </endpoints> 

@@ -23,9 +23,10 @@ Step #2. copy jar files (jaxb-api.jar, jaxb-impl.jar, jaxws-rt, stax-ex.jar, str
 
 Step #3. Write java webservices class
 
-Step #4. write sun-jaxws.xml (java webservices deployment )
+Step #4. write sun-jaxws.xml (java webservices deployment descriptor)
 
 Step #5. generate jaxb classess for input and output typs using wsgen command line utility 
+wsgen -s src -d build/classes -cp build/classes com.mysoftkey.jaxws.hellowold.HelloWorldImpl
 
 Step #6. copy generated files into a package of your application
 
@@ -42,5 +43,11 @@ Step #7. deploy the application
      
 </endpoints> 
 
-Step #8. access webservice via url: http://localhost:8080/HelloWorldWS
+Step #8. access webservice via url: http://localhost:8080/HelloWorldWS/HelloWorldWS?wsdl
+
+Step #9. to generate java client using wsimport
+wsimport -keep -verbose http://localhost:8080/HelloWorldWS/HelloWorldWS?wsdl
+
+reference:
+https://www.ibm.com/developerworks/library/ws-whichwsdl/index.html
 
